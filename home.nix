@@ -12,6 +12,7 @@ in {
     tex
     tmux
     zathura
+    zsh
   ];
 
   home = {

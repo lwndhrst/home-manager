@@ -1,6 +1,7 @@
 {
-  neovim 	= ./neovim;
-  tex 		= ./tex;
+  neovim  = ./neovim;
+  tex     = ./tex;
   tmux    = ./tmux;
-  zathura	= ./zathura;
+  zathura = ./zathura;
+  zsh     = ./zsh;
 }
