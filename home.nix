@@ -4,7 +4,6 @@ let
   modules = import ./modules;
 
 in {
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   imports = with modules; [
@@ -16,8 +15,6 @@ in {
   ];
 
   home = {
-    # Home Manager needs a bit of information about you and the
-    # paths it should manage.
     username = "leon";
     homeDirectory = "/home/leon";
 
@@ -28,6 +25,7 @@ in {
       git
       htop
       libqalculate
+      nil
       nitch
       ranger
       ripgrep
