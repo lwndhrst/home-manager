@@ -48,8 +48,7 @@
       set completion-highlight-bg     "#ebbcba"
       set completion-highlight-fg     "#26233a"
       
-      # set recolor-lightcolor          "#191724"
-      set recolor-lightcolor          "#0c0b11"
+      set recolor-lightcolor          "#191724"
       set recolor-darkcolor           "#e0def4"
       
       set recolor                     "true"
