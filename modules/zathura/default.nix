@@ -18,7 +18,8 @@
       # the document colors for a more uniform viewing experience.
       
       # set default-bg                  "#191724"
-      set default-bg                  "#0c0b11"
+      # set default-bg                  "#0c0b11"
+      set default-bg                  "#09080c"
       set default-fg                  "#e0def4"
       
       # set statusbar-bg                "#555169"
@@ -48,7 +49,8 @@
       set completion-highlight-bg     "#ebbcba"
       set completion-highlight-fg     "#26233a"
       
-      set recolor-lightcolor          "#191724"
+      # set recolor-lightcolor          "#191724"
+      set recolor-lightcolor          "#0c0b11"
       set recolor-darkcolor           "#e0def4"
       
       set recolor                     "true"
