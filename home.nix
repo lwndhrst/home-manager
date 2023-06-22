@@ -27,6 +27,7 @@ in {
       libqalculate
       nil
       nitch
+      openssh
       ranger
       ripgrep
       stylua
