@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 
 let 
   modules = import ./modules;
 
 in {
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   imports = with modules; [
@@ -15,8 +16,8 @@ in {
   ];
 
   home = {
-    username = "leon";
-    homeDirectory = "/home/leon";
+    username = "${user}";
+    homeDirectory = "/home/${user}";
 
     packages = with pkgs; [
       fd
@@ -46,6 +47,6 @@ in {
     # You can update Home Manager without changing this value. See
     # the Home Manager release notes for a list of state version
     # changes in each release.
-    stateVersion = "22.11";
+    stateVersion = "23.05";
   };
 }
