@@ -40,7 +40,7 @@
    ```
    Note: requires restart of WSL - `wsl --shutdown`.
 
-- Set `zsh` as default shell by editing `/etc/shells` and running `chsh`
+- Set `zsh` as default shell by first adding its absolute path to `/etc/shells` and then running `chsh`
    ```
    /home/<user>/.nix-profile/bin/zsh
    ```
