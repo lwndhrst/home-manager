@@ -48,7 +48,7 @@
       vimPlugins.dashboard-nvim
       vimPlugins.harpoon
       vimPlugins.nvim-colorizer-lua
-      vimPlugins.ranger-vim
+      customPkgs.vimPlugins.ranger-nvim
 
       # Latex
       vimPlugins.vimtex
