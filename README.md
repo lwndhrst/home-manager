@@ -3,13 +3,7 @@
 ## Setup
 
 1. [Install and setup WSL2](https://learn.microsoft.com/en-us/windows/wsl/install), e.g. with Debian.
-   For removing Windows PATH and disabling execution of Windows binaries add the following to `/etc/wsl.conf`:
-   ```
-   [interop]
-   enabled = false
-   appendWindowsPath = false
-   ```
-   Note: restart of Windows machine might be necessary.
+   <br>Note: restart of Windows machine might be necessary.
 
 2. Install nix via the [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer).
    ```
@@ -38,7 +32,7 @@
    enabled = false
    appendWindowsPath = false
    ```
-   Note: requires restart of WSL - `wsl --shutdown`.
+   Note: requires restart of WSL: `wsl --shutdown`.
 
 - Set `zsh` as default shell by first adding its absolute path to `/etc/shells` and then running `chsh`
    ```
