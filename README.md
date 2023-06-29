@@ -1,6 +1,6 @@
 # Nix + Home Manager configuration for WSL 2
 
-## Steps
+## Setup
 
 1. [Install and setup WSL2](https://learn.microsoft.com/en-us/windows/wsl/install), e.g. with Debian.
    For removing Windows PATH and disabling execution of Windows binaries add the following to `/etc/wsl.conf`:
@@ -28,4 +28,22 @@
 4. Update as follows:
    ```
    nix flake update && home-manager switch
+   ```
+
+## Misc
+
+- For removing Windows PATH and disabling execution of Windows binaries add the following to `/etc/wsl.conf`:
+   ```
+   [interop]
+   enabled = false
+   appendWindowsPath = false
+   ```
+   Note: requires restart of WSL - `wsl --shutdown`.
+
+- Set `zsh` as default shell by editing `/etc/shells` and running `chsh`
+   ```
+   /home/<user>/.nix-profile/bin/zsh
+   ```
+   ```
+   chsh -s /home/<user>/.nix-profile/bin/zsh
    ```
