@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "custom-nixpkgs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1685555033,
+        "narHash": "sha256-75v0WnIFlWA+3jfBbxWUGze9qYdwcU440P7kuFCjaiQ=",
+        "owner": "lwndhrst",
+        "repo": "custom-nixpkgs",
+        "rev": "25a788400d7fc3739d8cc60fd486ac0aa4089489",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lwndhrst",
+        "repo": "custom-nixpkgs",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -105,6 +125,7 @@
     },
     "root": {
       "inputs": {
+        "custom-nixpkgs": "custom-nixpkgs",
         "home-manager": "home-manager",
         "nix-neovim-plugins": "nix-neovim-plugins",
         "nixpkgs": "nixpkgs_2"

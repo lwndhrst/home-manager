@@ -14,24 +14,30 @@
     nix-neovim-plugins = {
       url = "github:NixNeovim/NixNeovimPlugins";
     };
+
+    custom-nixpkgs = {
+      url = "github:lwndhrst/custom-nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-neovim-plugins, ... }:
+  outputs = { nixpkgs, home-manager, nix-neovim-plugins, custom-nixpkgs, ... }:
     let
       user = "leon";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-	overlays = [
-	  nix-neovim-plugins.overlays.default
-	];
+        overlays = [
+          nix-neovim-plugins.overlays.default
+          custom-nixpkgs.overlays.default
+        ];
       };
 
     in {
       homeConfigurations."${user}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-	extraSpecialArgs = { inherit user; };
+        extraSpecialArgs = { inherit user; };
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
