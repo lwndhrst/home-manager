@@ -35,6 +35,7 @@ in {
       tree-sitter
       unzip
       wget
+      zig
     ];
 
     sessionVariables = { };
