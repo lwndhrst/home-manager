@@ -1,4 +1,8 @@
-{ config, pkgs, user, ... }:
+{ config
+, pkgs
+, user
+, ... 
+}:
 
 let 
   modules = import ./modules;
@@ -20,10 +24,12 @@ in {
     homeDirectory = "/home/${user}";
 
     packages = with pkgs; [
+      cmake
       fd
       gcc
       gh
       git
+      gnumake
       htop
       libqalculate
       nil
@@ -36,6 +42,9 @@ in {
       unzip
       wget
       zig
+
+      # LLaMA
+      llama-cpp
     ];
 
     sessionVariables = { };
