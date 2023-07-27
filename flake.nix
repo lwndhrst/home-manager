@@ -42,7 +42,7 @@
       };
 
     in {
-      homeConfigurations."${user}" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         extraSpecialArgs = { inherit user; };
