@@ -13,6 +13,7 @@ in {
 
   imports = with modules; [
     neovim
+    rust
     tex
     tmux
     zathura
