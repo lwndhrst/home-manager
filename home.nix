@@ -26,12 +26,9 @@ in {
     homeDirectory = "/home/${user}";
 
     packages = with pkgs; [
-      cmake
       fd
-      gcc
       gh
       git
-      gnumake
       htop
       libqalculate
       nil
@@ -43,7 +40,6 @@ in {
       tree-sitter
       unzip
       wget
-      zig
 
       # LLaMA
       llama-cpp
