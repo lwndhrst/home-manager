@@ -1,4 +1,5 @@
 {
+  c       = ./c;
   neovim  = ./neovim;
   rust    = ./rust;
   tex     = ./tex;

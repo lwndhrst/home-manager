@@ -12,6 +12,7 @@ in {
   programs.home-manager.enable = true;
 
   imports = with modules; [
+    c
     neovim
     rust
     tex

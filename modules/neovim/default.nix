@@ -56,7 +56,9 @@
       # Themes
       vimPlugins.rose-pine
 
+      # Misc
       vimPlugins.vim-be-good
+      vimExtraPlugins.Leetbuddy-nvim
     ];
   };
 }
