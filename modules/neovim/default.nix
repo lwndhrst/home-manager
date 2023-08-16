@@ -27,19 +27,22 @@
       vimPlugins.formatter-nvim
 
       # Treesitter
-      vimPlugins.nvim-treesitter
+      # vimPlugins.nvim-treesitter
 
       # If using default treesitter parser dir, all parsers have to be installed from here
-      # (vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-      #   nix
-      #   lua
-      #   rust
-      #   toml
-      #   markdown
-      #   javascript
-      #   css
-      #   html
-      # ]))
+      (vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+        bash
+        c
+        cpp
+        css
+        html
+        javascript
+        lua
+        markdown
+        nix
+        rust
+        toml
+      ]))
 
       # Misc
       vimPlugins.nvim-web-devicons
