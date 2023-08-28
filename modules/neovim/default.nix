@@ -61,7 +61,6 @@
 
       # Misc
       vimPlugins.vim-be-good
-      vimExtraPlugins.Leetbuddy-nvim
     ];
   };
 }
