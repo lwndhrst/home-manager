@@ -17,6 +17,7 @@ in {
     rust
     tex
     tmux
+    odin
     zathura
     zsh
   ];
