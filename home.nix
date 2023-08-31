@@ -43,7 +43,7 @@ in {
       wget
 
       # LLaMA
-      llama-cpp
+      # llama-cpp
     ];
 
     sessionVariables = { };
