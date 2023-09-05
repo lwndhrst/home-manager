@@ -40,6 +40,7 @@
         lua
         markdown
         nix
+        odin
         rust
         toml
       ]))
