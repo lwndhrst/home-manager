@@ -33,8 +33,8 @@
 
     envExtra = ''
       # Enable X11 forwarding for WSL2
-      export DISPLAY=$(ip route list default | awk '{print $3}'):0
-      export LIBGL_ALWAYS_INDIRECT=1
+      # export DISPLAY=$(ip route list default | awk '{print $3}'):0
+      # export LIBGL_ALWAYS_INDIRECT=1
 
       # Add nix packages to PATH
       export PATH=$PATH:~/.nix-profile/bin
