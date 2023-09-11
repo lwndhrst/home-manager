@@ -26,7 +26,7 @@
 
 ## Get OpenGL and Vulkan to work on non-NixOS Systems with [nixGL](https://github.com/guibou/nixGL)
 
-Invoke OpenGL/Vulkan Apps by prefixing the appropriate wrapper:
+Invoke OpenGL/Vulkan programs by prefixing the appropriate wrapper:
 
 - `nixGLIntel <program> <args>`
 - `nixGLMesa <program> <args>`
