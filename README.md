@@ -24,7 +24,7 @@
    nix flake update && home-manager switch
    ```
 
-## Get OpenGL and Vulkan Apps working on non-NixOS Systems with nixGL
+## Get OpenGL and Vulkan Apps working on non-NixOS Systems with [nixGL](https://github.com/guibou/nixGL)
 
 Invoke OpenGL/Vulkan Apps by prefixing the appropriate wrapper (the Intel one seems to work for AMD as well):
 
