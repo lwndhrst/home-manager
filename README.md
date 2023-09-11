@@ -26,12 +26,14 @@
 
 ## Get OpenGL and Vulkan to work on non-NixOS Systems with [nixGL](https://github.com/guibou/nixGL)
 
-Invoke OpenGL/Vulkan Apps by prefixing the appropriate wrapper (the Intel one seems to work for AMD as well):
+Invoke OpenGL/Vulkan Apps by prefixing the appropriate wrapper:
 
 - `nixGLIntel <program> <args>`
+- `nixGLMesa <program> <args>`
 - `nixGLNvidia <program> <args>`
-- `nixGLVulkanIntel <program> <args>`
-- `nixGLVulkanNvidia <program> <args>`
+- `nixVulkanIntel <program> <args>`
+- `nixVulkanMesa <program> <args>`
+- `nixVulkanNvidia <program> <args>`
 
 ```nix
 # devShell config for nix develop
