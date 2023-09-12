@@ -62,7 +62,7 @@ Invoke OpenGL/Vulkan programs by prefixing the appropriate wrapper:
       devShell.${system} = pkgs.mkShell {
         buildInputs = with pkgs; [
           mesa-demos
-          pkgs.nixgl.nixGLIntel
+          pkgs.nixgl.nixGLMesa
         ];
 
         LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
