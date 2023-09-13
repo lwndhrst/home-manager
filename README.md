@@ -70,9 +70,9 @@ Invoke OpenGL/Vulkan programs by prefixing the appropriate wrapper:
 }
 ```
 
-## WSL
+## Misc
 
-- For removing Windows PATH and disabling execution of Windows binaries add the following to `/etc/wsl.conf`:
+- For removing Windows PATH and disabling execution of Windows binaries on WSL add the following to `/etc/wsl.conf`:
    ```
    [interop]
    enabled = false
