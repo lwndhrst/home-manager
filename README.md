@@ -1,4 +1,4 @@
-# Nix + Home Manager configuration for WSL 2
+# Nix + Home Manager configuration for non-NixOS systems
 
 ## Setup
 
