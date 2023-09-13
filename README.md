@@ -1,4 +1,4 @@
-# Nix + Home Manager configuration for non-NixOS systems
+# Personal Nix + Home Manager Configuration for non-NixOS Systems
 
 ## Setup
 
