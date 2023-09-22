@@ -10,7 +10,7 @@
 
 2. Initial setup of [Home Manager with Flakes](https://nix-community.github.io/home-manager/index.html#ch-nix-flakes).
    ```sh
-   git clone https://github.com/lwndhrst/home-manager-wsl ~/.config/home-manager
+   git clone https://github.com/lwndhrst/home-manager-config ~/.config/home-manager
    ```
    ```sh
    nix run home-manager/master -- switch
