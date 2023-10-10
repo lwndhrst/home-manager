@@ -6,6 +6,8 @@
 
 let
   nixosModule = { home }: home-manager.nixosModules.home-manager {
+    inherit pkgs;
+
     home-manager.extraSpecialArgs = {
       inherit pkgs;
     };
@@ -23,17 +25,8 @@ in {
     home = ./desktop;
   };
 
-  laptop = home-manager.nixosModules.home-manager {
-    home-manager.extraSpecialArgs = {
-      inherit pkgs;
-    };
-
-    home-manager.users.${user} = { pkgs, ... }: {
-      imports = [
-        ./shared.nix
-        ./laptop
-      ];
-    };
+  laptop = nixosModule {
+    home = ./laptop;
   };
 
   vbox = nixosModule {
