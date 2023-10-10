@@ -5,7 +5,7 @@
 }:
 
 let
-  nixosModule = home: home-manager.nixosModules.home-manager {
+  nixosModule = { home }: home-manager.nixosModules.home-manager {
     home-manager.extraSpecialArgs = {
       inherit pkgs;
     };
