@@ -2,9 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    llvmPackages_15.clang
+    llvmPackages_16.clang
 
     # clangd (LSP), etc.
-    clang-tools_15
+    clang-tools_16
   ];
 }
