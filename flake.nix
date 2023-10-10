@@ -40,9 +40,7 @@
           })
         ];
       };
-      config = pkgs.config;
-      lib = nixpkgs.lib;
-      hosts = import ./hosts { inherit home-manager config lib pkgs user; };
+      hosts = import ./hosts { inherit home-manager pkgs user; };
 
     in {
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {

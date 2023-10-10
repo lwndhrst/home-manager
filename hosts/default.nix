@@ -1,13 +1,11 @@
 { home-manager
-, config
-, lib
 , pkgs
 , user
 , ... 
 }:
 
 let
-  nixosModule = { config, lib, pkgs, home }: home-manager.nixosModules.home-manager {
+  nixosModule = { home }: home-manager.nixosModules.home-manager {
     home-manager.extraSpecialArgs = {
       inherit pkgs;
     };
@@ -21,23 +19,8 @@ let
   };
 
 in {
-  desktop = nixosModule {
-    inherit config lib pkgs;
-    home = ./desktop;
-  };
-
-  laptop = nixosModule {
-    inherit config lib pkgs;
-    home = ./laptop;
-  };
-
-  vbox = nixosModule {
-    inherit config lib pkgs;
-    home = ./vbox;
-  };
-
-  wsl = nixosModule {
-    inherit config lib pkgs;
-    home = ./wsl;
-  };
+  desktop = nixosModule { home = ./desktop; };
+  laptop =  nixosModule { home = ./laptop; };
+  vbox =    nixosModule { home = ./vbox; };
+  wsl =     nixosModule { home = ./wsl; };
 }
