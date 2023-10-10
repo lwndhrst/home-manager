@@ -31,7 +31,5 @@ in {
     home = ./vbox;
   };
 
-  wsl = nixosModule {
-    home = ./wsl;
-  };
+  wsl = ./wsl;
 }
