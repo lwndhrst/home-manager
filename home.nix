@@ -1,10 +1,11 @@
-{ pkgs
+{ config
+, pkgs
 , user
 , ... 
 }:
 
 let 
-  modules = import ../../modules;
+  modules = import ./modules;
 
 in {
   # Let Home Manager install and manage itself.
