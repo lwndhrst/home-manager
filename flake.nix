@@ -40,7 +40,7 @@
           })
         ];
       };
-      hosts = import ./hosts { inherit home-manager pkgs user; };
+      hosts = import ./hosts;
 
     in {
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
@@ -56,6 +56,6 @@
         # to pass through arguments to home.nix
       };
 
-      inherit hosts;
+      hosts = import ./hosts;
     };
 }

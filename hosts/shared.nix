@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}:
+{ pkgs }:
 
 let
   modules = import ../modules;
@@ -19,51 +17,32 @@ in {
     zsh
   ];
 
-  systemd.user.targets.tray = {
-    Unit = {
-      Description = "System Tray Service for Home Manager";
-      Requires = [ "graphical-session-pre.target" ];
-    };
-  };
+  packages = with pkgs; [
+    # term utils
+    acpi
+    customPkgs.nitch
+    fd
+    htop
+    libqalculate
+    mons
+    ripgrep
+    xclip
 
-  services = {
-    # network manager systray
-    network-manager-applet.enable = true;
+    # image/audio/video
+    feh
+    librsvg
 
-    # pulse audio systray
-    pasystray.enable = true;
-  };
+    # file system
+    unzip
+    ranger
 
-  home = {
-    packages = with pkgs; [
-      # term utils
-      acpi
-      customPkgs.nitch
-      fd
-      htop
-      libqalculate
-      mons
-      ripgrep
-      xclip
+    # random dev stuff
+    gh
+    nil
+    stylua
+    tree-sitter
 
-      # image/audio/video
-      feh
-      librsvg
-      pavucontrol       # pulse audio volume controle
-      pamixer           # pulse audio mixer cli
-
-      # file system
-      unzip
-      ranger
-
-      # random dev stuff
-      gh
-      nil
-      stylua
-      tree-sitter
-
-      # misc
-      dconf
-    ];
-  };
+    # misc
+    dconf
+  ];
 }
