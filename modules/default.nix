@@ -8,7 +8,6 @@
   neovim =    ./neovim;
   picom =     ./picom;
   rofi =      ./rofi;
-  tmux =      ./tmux;
   zathura =   ./zathura;
   zotero =    ./zotero;
   zsh =       ./zsh;
