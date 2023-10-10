@@ -1,10 +1,21 @@
 {
-  c       = ./c;
-  neovim  = ./neovim;
-  rust    = ./rust;
-  tex     = ./tex;
-  tmux    = ./tmux;
-  odin    = ./odin;
-  zathura = ./zathura;
-  zsh     = ./zsh;
+  android =   ./android;
+  flameshot = ./flameshot;
+  fzf =       ./fzf;
+  gtk =       ./gtk;
+  kitty =     ./kitty;
+  lightdm =   ./lightdm;
+  neovim =    ./neovim;
+  picom =     ./picom;
+  rofi =      ./rofi;
+  zathura =   ./zathura;
+  zotero =    ./zotero;
+  zsh =       ./zsh;
+
+  # Languages, Toolchains, LSP, ...
+  c =         ./c;
+  odin =      ./odin;
+  rust =      ./rust;
+  tex =       ./tex;
+  zig =       ./zig;
 }

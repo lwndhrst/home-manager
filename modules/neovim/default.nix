@@ -28,7 +28,7 @@
 
       # Treesitter
       # vimPlugins.nvim-treesitter
-
+      
       # If using default treesitter parser dir, all parsers have to be installed from here
       (vimPlugins.nvim-treesitter.withPlugins (p: with p; [
         bash
@@ -59,9 +59,6 @@
 
       # Themes
       vimPlugins.rose-pine
-
-      # Misc
-      vimPlugins.vim-be-good
     ];
   };
 }

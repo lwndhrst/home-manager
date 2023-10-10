@@ -26,21 +26,12 @@
     };
 
     initExtra = ''
-      # Starship Prompt
+      # Starship Theme
       export STARSHIP_CONFIG=~/.config/starship/starship.toml
       eval "$(${pkgs.starship}/bin/starship init zsh)"
     '';
-
-    envExtra = ''
-      # Enable X11 forwarding for WSL2
-      # export DISPLAY=$(ip route list default | awk '{print $3}'):0
-      # export LIBGL_ALWAYS_INDIRECT=1
-
-      # Add nix packages to PATH
-      export PATH=$PATH:~/.nix-profile/bin
-    '';
   };
-
+  
   # Starship prompt config
   home.file.".config/starship/starship.toml" = {
     source = ./starship.toml;
