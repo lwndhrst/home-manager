@@ -23,8 +23,17 @@ in {
     home = ./desktop;
   };
 
-  laptop = nixosModule {
-    home = ./laptop;
+  laptop = home-manager.nixosModules.home-manager {
+    home-manager.extraSpecialArgs = {
+      inherit pkgs;
+    };
+
+    home-manager.users.${user} = { pkgs, ... }: {
+      imports = [
+        ./shared.nix
+        ./laptop
+      ];
+    };
   };
 
   vbox = nixosModule {
