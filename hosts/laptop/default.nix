@@ -33,7 +33,7 @@ in {
   home = {
     packages = with pkgs; [
       # video/audio
-      pavucontrol       # pulse audio volume controle
+      pavucontrol       # pulse audio volume control
       pamixer           # pulse audio mixer cli
 
       # apps
@@ -42,11 +42,6 @@ in {
       gimp
       portfolio         # portfolio performance
       thunderbird       # email
-
-      # game stuff
-      lutris            # game platform (emulation, etc.)
-      path-of-building
-      protontricks      # winetricks wrapper for proton games
     ] ++ (
       shared.packages
     );
