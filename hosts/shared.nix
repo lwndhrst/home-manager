@@ -65,5 +65,14 @@ in {
       # misc
       dconf
     ];
+
+    pointerCursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+    };
+
+    sessionVariables = { };
+
+    stateVersion = "22.11";
   };
 }
