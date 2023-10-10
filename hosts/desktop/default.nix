@@ -1,4 +1,6 @@
-{ pkgs }:
+{ pkgs
+, ...
+}:
 
 let
   modules = import ../../modules;
