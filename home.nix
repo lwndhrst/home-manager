@@ -44,10 +44,6 @@ in {
 
       # LLaMA
       # llama-cpp
-
-      # NixGL
-      nixgl.nixGLMesa
-      nixgl.nixVulkanMesa
     ];
 
     sessionVariables = { };
