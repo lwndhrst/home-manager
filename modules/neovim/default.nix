@@ -50,9 +50,9 @@
       vimPlugins.telescope-nvim
       vimPlugins.lualine-nvim
       vimPlugins.dashboard-nvim
-      vimPlugins.harpoon
       vimPlugins.nvim-colorizer-lua
       customPkgs.vimPlugins.ranger-nvim
+      customPkgs.vimPlugins.harpoon
 
       # Latex
       vimPlugins.vimtex
