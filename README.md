@@ -1,6 +1,36 @@
-# Personal Nix + Home Manager Config for non-NixOS Systems
+# Personal Home Manager Config
 
-## Setup
+## Usage as NixOS Module
+
+```
+inputs.home-manager-config = {
+  url = "github:lwndhrst/home-manager-config";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+```
+
+```
+# ...
+
+lib.nixosSystem {
+  inherit lib pkgs system;
+
+  specialArgs = {
+    inherit user;
+  };
+
+  modules = [
+    ./configuration.nix
+
+    # Home config from home-manager-config flake
+    home-manager-config.nixosModules.desktop;
+  ];
+};
+
+# ...
+```
+
+## Setup for non-NixOS Systems
 
 1. Install nix via the [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer).
    ```sh
