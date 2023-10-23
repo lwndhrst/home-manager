@@ -1,27 +1,6 @@
 { pkgs, ... }:
 
-let
-  fzf-cd = pkgs.writeShellScriptBin "fcd" ''
-    #!${pkgs.bash}/bin/bash
-    DIR=$(${pkgs.fd}/bin/fd --type directory | ${pkgs.fzf}/bin/fzf)
-    if [[ $DIR && -d $DIR ]]; then
-      cd $DIR
-    fi
-  '';
-  fzf-edit = pkgs.writeShellScriptBin "fe" ''
-    #!${pkgs.bash}/bin/bash
-    FILE=$(${pkgs.fd}/bin/fd --type file | ${pkgs.fzf}/bin/fzf)
-    if [[ $FILE && -f $FILE ]]; then
-      $EDITOR $FILE
-    fi
-  '';
-
-in {
-  home.packages = [
-    fzf-cd   # fcd
-    fzf-edit # fe
-  ];
-
+{
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
