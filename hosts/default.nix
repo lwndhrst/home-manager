@@ -1,19 +1,9 @@
-{ home-manager, user }:
-
 let 
   nixosModule = home: { config, pkgs, lib, ... }: {
-    config = home-manager.nixosModules.home-manager {
-      home-manager.extraSpecialArgs = {
-        inherit pkgs;
-      };
-
-      home-manager.users.${user} = { config, lib, pkgs, ... }: {
-        imports = [
-          ./home.nix
-          home
-        ];
-      };
-    };
+    imports = [
+      ./home.nix
+      home
+    ];
   };
 
 in {

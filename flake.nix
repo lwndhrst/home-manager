@@ -48,6 +48,6 @@
         modules = [ ./wsl/home.nix ];
       };
       
-      nixosModules = import ./hosts { inherit home-manager user; };
+      nixosModules = import ./hosts;
     };
 }
