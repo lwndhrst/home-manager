@@ -48,6 +48,8 @@
         modules = [ ./wsl/home.nix ];
       };
 
-      nixosModules = import ./hosts;
+      nixosModules = { config }: { 
+        config = import ./hosts { inherit config; };
+      };
     };
 }
