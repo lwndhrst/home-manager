@@ -8,7 +8,7 @@ let
           inherit pkgs;
         };
 
-        home-manager.users.${user} = { config, lib, pkgs, ... }: {
+        home-manager.users.${user} = { config, pkgs, lib, ... }: {
           imports = [
             ./home.nix
             home

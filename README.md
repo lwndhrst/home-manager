@@ -2,14 +2,14 @@
 
 ## Usage as NixOS Module
 
-```
+```nix
 inputs.home-manager-config = {
   url = "github:lwndhrst/home-manager-config";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
 
-```
+```nix
 # ...
 
 lib.nixosSystem {
