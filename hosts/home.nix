@@ -1,9 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 
 let
   modules  = import ../modules;
 
 in {
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   imports = with modules; [
     flameshot
     fzf
@@ -31,6 +34,9 @@ in {
   };
 
   home = {
+    username = "${user}";
+    homeDirectory = "/home/${user}";
+
     packages = with pkgs; [
       # Term Utils
       htop              # System Resources

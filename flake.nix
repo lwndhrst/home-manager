@@ -31,6 +31,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
+        config.allowUnfree = true;
         overlays = [
           nix-neovim-plugins.overlays.default
           custom-nixpkgs.overlays.default
@@ -40,15 +41,10 @@
           })
         ];
       };
-      hosts = import ./hosts { inherit home-manager user; };
+      hosts = import ./hosts { inherit pkgs home-manager user; };
 
     in {
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit user; };
-        modules = [ ./wsl/home.nix ];
-      };
-      
+      homeConfigurations = hosts.homeConfigurations;
       nixosModules = hosts.nixosModules;
     };
 }
