@@ -7,11 +7,6 @@
     syntaxHighlighting.enable = true;
     enableCompletion = true;
 
-    shellAliases = {
-      fcd = "cd $(fd --type directory | fzf)";
-      fe = "$EDITOR $(fd --type file | fzf)";
-    };
-
     plugins = [
       {
         name = "zsh-nix-shell";
