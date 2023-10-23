@@ -1,27 +1,16 @@
-{ pkgs
-, config
-, home-manager
-, user
-, ... 
-}:
+{
+  desktop = [
+    ./home.nix
+    ./desktop/home.nix
+  ];
 
-let
-  nixosModule = home: home-manager.nixosModules.home-manager {
-    home-manager.extraSpecialArgs = {
-      inherit pkgs;
-      nixosConfig = config;
-    };
+  laptop = [
+    ./home.nix
+    ./laptop/home.nix
+  ];
 
-    home-manager.users.${user} = { config, lib, pkgs, ... }: {
-      imports = [
-        ./home.nix
-        home
-      ];
-    };
-  };
-
-in {
-  desktop = nixosModule ./desktop/home.nix;
-  laptop = nixosModule ./laptop/home.nix;
-  vbox = nixosModule ./vbox/home.nix;
+  vbox = [
+    ./home.nix
+    ./vbox/home.nix
+  ];
 }

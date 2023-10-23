@@ -47,10 +47,7 @@
         extraSpecialArgs = { inherit user; };
         modules = [ ./wsl/home.nix ];
       };
-
-      nixosModules = { config }: { 
-        options = {};
-        config = import ./hosts { inherit config; };
-      };
+      
+      hosts = import ./hosts;
     };
 }
