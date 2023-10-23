@@ -1,5 +1,6 @@
 {
   c       = ./c;
+  fzf     = ./fzf;
   neovim  = ./neovim;
   rust    = ./rust;
   tex     = ./tex;

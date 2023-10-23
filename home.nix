@@ -13,6 +13,7 @@ in {
 
   imports = with modules; [
     c
+    fzf
     neovim
     rust
     tex
