@@ -48,9 +48,6 @@
         modules = [ ./wsl/home.nix ];
       };
       
-      modules = {
-        shared = import ./hosts/home.nix;
-        hosts = import ./hosts;
-      };
+      hosts = import ./hosts;
     };
 }

@@ -1,5 +1,16 @@
 {
-  desktop = import ./desktop/home.nix;
-  laptop = import ./laptop/home.nix;
-  vbox = import ./vbox/home.nix;
+  desktop = [
+    ./home.nix
+    ./desktop/home.nix
+  ];
+
+  laptop = [
+    ./home.nix
+    ./laptop/home.nix
+  ];
+
+  vbox = [
+    ./home.nix
+    ./vbox/home.nix
+  ];
 }
