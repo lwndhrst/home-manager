@@ -49,6 +49,7 @@
       };
 
       nixosModules = { config }: { 
+        options = {};
         config = import ./hosts { inherit config; };
       };
     };
