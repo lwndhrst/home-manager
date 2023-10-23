@@ -36,14 +36,14 @@
       eval "$(${pkgs.starship}/bin/starship init zsh)"
 
       fzf-cd() {
-        DIR=$(${pkgs.fd}/bin/fd --type directory --hidden | ${pkgs.fzf}/bin/fzf)
+        DIR=$(${pkgs.fd}/bin/fd --type directory | ${pkgs.fzf}/bin/fzf)
         if [[ $DIR && -d $DIR ]]; then
           cd $DIR
         fi
       }
 
       fzf-edit() {
-        FILE=$(${pkgs.fd}/bin/fd --type file --hidden | ${pkgs.fzf}/bin/fzf)
+        FILE=$(${pkgs.fd}/bin/fd --type file | ${pkgs.fzf}/bin/fzf)
         if [[ $FILE && -f $FILE ]]; then
           $EDITOR $FILE
         fi
