@@ -40,6 +40,7 @@
           })
         ];
       };
+      hosts = import ./hosts { inherit home-manager user; };
 
     in {
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
@@ -48,6 +49,6 @@
         modules = [ ./wsl/home.nix ];
       };
       
-      nixosModules = import ./hosts { inherit home-manager user; };
+      nixosModules = hosts.nixosModules;
     };
 }
