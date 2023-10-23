@@ -1,7 +1,7 @@
 { pkgs
+, config
 , home-manager
 , user
-, lib
 , ... 
 }:
 
@@ -9,6 +9,7 @@ let
   nixosModule = home: home-manager.nixosModules.home-manager {
     home-manager.extraSpecialArgs = {
       inherit pkgs;
+      nixosConfig = config;
     };
 
     home-manager.users.${user} = { config, lib, pkgs, ... }: {
@@ -21,14 +22,14 @@ let
 
 in {
   desktop = {
-    config = lib.mkMerge [ nixosModule ./desktop/home.nix ];
+    config = nixosModule ./desktop/home.nix;
   };
 
   laptop = {
-    config = lib.mkMerge [ nixosModule ./laptop/home.nix ];
+    config = nixosModule ./laptop/home.nix;
   };
 
   vbox = {
-    config = lib.mkMerge [ nixosModule ./vbox/home.nix ];
+    config = nixosModule ./vbox/home.nix;
   };
 }
