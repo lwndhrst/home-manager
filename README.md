@@ -1,5 +1,9 @@
 # Personal Home Manager Config
 
+## ⚠️ Archive Notice ⚠️
+
+This repo is obsolete, all home-manager configurations are now part of my [nixos-config](https://github.com/lwndhrst/nixos-config) flake.
+
 ## Usage as NixOS Module
 
 ```nix
